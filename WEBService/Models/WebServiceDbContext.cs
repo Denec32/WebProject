@@ -8,9 +8,8 @@ namespace WEBService.Models
 {
     public class WebServiceDBContext : DbContext
     {
-        public WebServiceDBContext(DbContextOptions<WebServiceDBContext> options):base(options)
+        public WebServiceDBContext()
         {
-            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
@@ -26,7 +25,7 @@ namespace WEBService.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseNpgsql(@"Server=localhost;User Id = postgres; Password=25647;Port=5432;Database=WebServiceDb");
+            optionsBuilder.UseNpgsql(@"Host=localhost;Username=postgres; Password=25647;Port=5432;Database=WebServiceDb");
         }
         
     }

@@ -27,8 +27,6 @@ namespace WEBService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string con = "Host=localhost;User Id =postgres;Password=25647;Port=5432;Database=WebServiceDb";
-            services.AddDbContext<WebServiceDBContext>(options => options.UseNpgsql(con));
             services.AddControllers();
         }
 

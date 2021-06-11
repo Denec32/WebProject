@@ -10,7 +10,8 @@ namespace WEBService.Models
     {
         public int MeteringDeviceId { get; set; }
 
-        public ElectricityMeasuringPoint ElectricityMeasuringPoints { get; set; }
+        //public ElectricityMeasuringPoint ElectricityMeasuringPoints { get; set; }
+        public List<ElectricityMeasuringPoint> ElectricityMeasuringPoints { get; set; }
 
     }
 }

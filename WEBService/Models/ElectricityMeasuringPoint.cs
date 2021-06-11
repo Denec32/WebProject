@@ -22,7 +22,10 @@ namespace WEBService.Models
         public int PointOfUseId { get; set; }
         public PointOfUse PointOfUse { get; set; }
 
-        public MeteringDevice MeteringDevices { get; set; }
+        //public MeteringDevice MeteringDevices { get; set; }
+        public List<MeteringDevice> MeteringDevices { get; set; }
+
+
 
     }
 }

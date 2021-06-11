@@ -13,7 +13,7 @@ namespace WEBService.Models
         public int ElectricityMeasuringPointId { get; set; }
 
         [Required]
-        public string MyProperty { get; set; }
+        public string Name{ get; set; }
 
         public ELectricityMeter ELectricityMeter { get; set; }
         public CurrentTransformer CurrentTransformer { get; set; }

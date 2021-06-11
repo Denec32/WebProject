@@ -13,7 +13,7 @@ namespace WEBService.Models
         public int CurrentTransformerId { get; set; }
 
         public string Number { get; set; }
-        public int TransformationRatio { get; set; }
+        public float TransformationRatio { get; set; }
         public DateTime CheckDate { get; set; }
         public string TransformerType { get; set; }
 

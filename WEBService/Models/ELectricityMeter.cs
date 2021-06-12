@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace WEBService.Models
 {
     // Счетчик электрической энергии
-    public class ELectricityMeter
+    public class ElectricityMeter
     {
         [Key]
-        public int ELectricityMeterId { get; set; }
+        public int ElectricityMeterId { get; set; }
 
         public string Number { get; set; }
 

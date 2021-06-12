@@ -12,7 +12,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using WEBService.Models;
 using Microsoft.EntityFrameworkCore;
-
 namespace WEBService
 {
     public class Startup
@@ -29,6 +28,9 @@ namespace WEBService
         {
             services.AddControllers();
             services.AddDbContext<WebServiceDBContext>();
+
+            services.AddSwaggerGen();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +47,10 @@ namespace WEBService
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                "My API V1"); });
         }
     }
 }

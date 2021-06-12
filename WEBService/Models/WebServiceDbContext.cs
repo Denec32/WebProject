@@ -13,7 +13,7 @@ namespace WEBService.Models
 
         public DbSet<CurrentTransformer> CurrentTransformers { get; set; }
         public DbSet<ElectricityMeasuringPoint> ElectricityMeasuringPoints { get; set; }
-        public DbSet<ELectricityMeter> ELectricityMeters { get; set; }
+        public DbSet<ElectricityMeter> ElectricityMeters { get; set; }
         public DbSet<MeteringDevice> MeteringDevices { get; set; }
         public DbSet<Organization> Organizations { get; set; }
         public DbSet<PointOfUse> PointsOfUse { get; set; }
@@ -27,8 +27,7 @@ namespace WEBService.Models
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            
+        {           
             modelBuilder.Entity<Organization>().HasData(
                 new Organization[]
                 {
@@ -65,11 +64,11 @@ namespace WEBService.Models
                     }
                 });
             
-            modelBuilder.Entity<ELectricityMeter>().HasData(
-                new ELectricityMeter[]
+            modelBuilder.Entity<ElectricityMeter>().HasData(
+                new ElectricityMeter[]
                 {
-                    new ELectricityMeter{
-                        ELectricityMeterId = 1, 
+                    new ElectricityMeter{
+                        ElectricityMeterId = 1, 
                         ElectricityMeasuringPointId = 1,
                         Number = "12AB", CheckDate = DateTime.Now, MeterType = "V1" 
                     }

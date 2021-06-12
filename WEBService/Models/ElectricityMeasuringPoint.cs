@@ -15,7 +15,7 @@ namespace WEBService.Models
         [Required]
         public string Name{ get; set; }
 
-        public ELectricityMeter ELectricityMeter { get; set; }
+        public ElectricityMeter ElectricityMeter { get; set; }
         public CurrentTransformer CurrentTransformer { get; set; }
         public PotentialTransformer PotentialTransformer { get; set; }
 

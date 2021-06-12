@@ -29,3 +29,15 @@ D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.dll
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\ref\WEBService.dll
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.pdb
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.genruntimeconfig.cache
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\System.Web.Http.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\System.Web.Http.WebHost.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Swashbuckle.Core.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\WebActivatorEx.dll
+D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.MvcApplicationPartsAssemblyInfo.cs

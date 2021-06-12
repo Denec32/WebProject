@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using WEBService.Data;
 
 namespace WEBService.Models
 {
@@ -7,8 +8,7 @@ namespace WEBService.Models
     {
         public WebServiceDBContext()
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+
         }
 
         public DbSet<CurrentTransformer> CurrentTransformers { get; set; }
@@ -27,90 +27,8 @@ namespace WEBService.Models
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {           
-            modelBuilder.Entity<Organization>().HasData(
-                new Organization[]
-                {
-                    new Organization { 
-                        OrganizationId = 1, 
-                        Name = "Parent", Address = "ул. 8 Марта 35"}
-                });
-
-            modelBuilder.Entity<Subsidiary>().HasData(
-                new Subsidiary[]
-                {
-                    new Subsidiary{ 
-                        SubsidiaryId = 1, 
-                        OrganizationId = 1, 
-                        Name = "Child", Address = "ул. Пушкина 12А" 
-                    }
-                });
-
-            modelBuilder.Entity<PointOfUse>().HasData(
-                new PointOfUse[]
-                {
-                    new PointOfUse{
-                        PointOfUseId = 1,
-                        SubsidiaryId = 1,
-                        Address = "ул. Калинина 12", Name = "Consumer",
-                    }
-                });
-            modelBuilder.Entity<ElectricityMeasuringPoint>().HasData(
-                new ElectricityMeasuringPoint[]
-                {
-                    new ElectricityMeasuringPoint{ 
-                        ElectricityMeasuringPointId = 1,
-                        Name = "Point 1", PointOfUseId = 1 
-                    }
-                });
-            
-            modelBuilder.Entity<ElectricityMeter>().HasData(
-                new ElectricityMeter[]
-                {
-                    new ElectricityMeter{
-                        ElectricityMeterId = 1, 
-                        ElectricityMeasuringPointId = 1,
-                        Number = "12AB", CheckDate = DateTime.Now, MeterType = "V1" 
-                    }
-                });
-
-            modelBuilder.Entity<CurrentTransformer>().HasData(
-                new CurrentTransformer[]
-                {
-                    new CurrentTransformer{ 
-                        CurrentTransformerId = 1,
-                        ElectricityMeasuringPointId = 1,
-                        Number = "12AC", CheckDate = DateTime.Now, TransformerType = "C1", TransformationRatio = 1.2f
-                    }
-                });
-            
-            modelBuilder.Entity<PotentialTransformer>().HasData(
-                new PotentialTransformer[]
-                {
-                    new PotentialTransformer{
-                        PotentialTransformerId = 1,
-                        ElectricityMeasuringPointId = 1,
-                        Number = "12AD", CheckDate = DateTime.Now, TransformerType = "P1", TransformationRatio = 1.8f,
-                    }
-                });
-            
-            modelBuilder.Entity<SupplyEndpoint>().HasData(
-                new SupplyEndpoint[]
-                {
-                    new SupplyEndpoint{
-                        SupplyEndPointId = 1,
-                        PointOfUseId = 1,
-                        Name = "EndPoint 1", MaxPower = 12,
-                    }
-                });
-
-            modelBuilder.Entity<MeteringDevice>().HasData(
-                new MeteringDevice[]
-                {
-                    new MeteringDevice{ 
-                        MeteringDeviceId = 1
-                    }
-                });
+        {
+            modelBuilder.AddData();
         }
     }
 }

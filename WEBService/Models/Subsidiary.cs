@@ -13,16 +13,10 @@ namespace WEBService.Models
         [Key]
         public int SubsidiaryId { get; set; }
 
-        [Required]
         public string Name { get; set; }
-
-        [Required]
         public string Address { get; set; }
 
-        [Required]
         public Organization Organization { get; set; }
-        
-        [Required]
         public int OrganizationId { get; set; }
 
         public List<PointOfUse> PointsOfUse { get; set; }

@@ -12,7 +12,6 @@ namespace WEBService.Models
         [Key]
         public int ElectricityMeasuringPointId { get; set; }
 
-        [Required]
         public string Name{ get; set; }
 
         public ElectricityMeter ElectricityMeter { get; set; }

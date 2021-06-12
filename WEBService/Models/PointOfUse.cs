@@ -11,14 +11,11 @@ namespace WEBService.Models
     {
         [Key]
         public int PointOfUseId { get; set; }
-        [Required]
+
         public string Name { get; set; }
-        [Required]
         public string Address { get; set; }
 
-        [Required]
         public int SubsidiaryId { get; set; }
-        [Required]
         public Subsidiary Subsidiary { get; set; }
 
         public List<ElectricityMeasuringPoint> ElectricityMeasuringPoints { get; set; }

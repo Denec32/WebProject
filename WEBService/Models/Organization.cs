@@ -12,10 +12,7 @@ namespace WEBService.Models
         [Key]
         public int OrganizationId { get; set; }
 
-        [Required]
         public string Name { get; set; }
-
-        [Required]
         public string Address { get; set; }
 
         public List<Subsidiary> Subsidiaries { get; set; }

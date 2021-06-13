@@ -10,11 +10,11 @@ namespace WEBService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class MeasurementPointControl : ControllerBase
+    public class MeasurementPointController1 : ControllerBase
     {
         WebServiceDBContext db;
 
-        public MeasurementPointControl(WebServiceDBContext context)
+        public MeasurementPointController1(WebServiceDBContext context)
         {
             db = context;
         }

@@ -14,7 +14,6 @@ D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.Extensions.Dependen
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Npgsql.dll
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.csproj.AssemblyReference.cache
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.AssemblyInfoInputs.cache
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.AssemblyInfo.cs
@@ -43,3 +42,5 @@ D:\Projects\WEBService\WEBService\bin\Debug\net5.0\WebActivatorEx.dll
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.MvcApplicationPartsAssemblyInfo.cs
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Humanizer.dll
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Refit.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Refit.HttpClientFactory.dll

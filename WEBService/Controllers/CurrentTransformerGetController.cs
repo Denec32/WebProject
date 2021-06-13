@@ -11,11 +11,11 @@ namespace WEBService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CurrentTransformerGet : ControllerBase
+    public class CurrentTransformerGetController : ControllerBase
     {
         WebServiceDBContext db;
 
-        public CurrentTransformerGet(WebServiceDBContext context)
+        public CurrentTransformerGetController(WebServiceDBContext context)
         {
             db = context;
         }

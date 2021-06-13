@@ -44,3 +44,4 @@ D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Humanizer.dll
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Refit.dll
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Refit.HttpClientFactory.dll
+D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.csproj.AssemblyReference.cache

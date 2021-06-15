@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q8jyp/Z3O77Eztheh79ajHtNH4hdZD1fzDajAjOeBR9/I7BGPb0HMqjH2JN36Yad7jm8k5G8w5XLO7Ba5jqx8w==",
+  "dgSpecHash": "dfqyQCNn6Evq1zLj3imrdOutBWIPNq95o7jHIbIHO637FAMk/ohpZVSb/Hfr9DsYKp8BjJ0KH1PLvtdNVPEOMw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\WEBService\\WEBService\\WEBService.csproj",
   "expectedPackageFiles": [
@@ -30,8 +30,8 @@
     "C:\\Users\\denec\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\denec\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\denec\\.nuget\\packages\\newtonsoft.json\\7.0.1\\newtonsoft.json.7.0.1.nupkg.sha512",
-    "C:\\Users\\denec\\.nuget\\packages\\npgsql\\5.0.5\\npgsql.5.0.5.nupkg.sha512",
-    "C:\\Users\\denec\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.6\\npgsql.entityframeworkcore.postgresql.5.0.6.nupkg.sha512",
+    "C:\\Users\\denec\\.nuget\\packages\\npgsql\\5.0.7\\npgsql.5.0.7.nupkg.sha512",
+    "C:\\Users\\denec\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.7\\npgsql.entityframeworkcore.postgresql.5.0.7.nupkg.sha512",
     "C:\\Users\\denec\\.nuget\\packages\\refit\\6.0.38\\refit.6.0.38.nupkg.sha512",
     "C:\\Users\\denec\\.nuget\\packages\\refit.httpclientfactory\\6.0.38\\refit.httpclientfactory.6.0.38.nupkg.sha512",
     "C:\\Users\\denec\\.nuget\\packages\\swashbuckle\\5.6.0\\swashbuckle.5.6.0.nupkg.sha512",

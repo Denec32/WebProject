@@ -26,7 +26,11 @@ namespace WEBApplication.Controllers
         public IActionResult Index()
         {
             ViewData["Count"] = GetPointOfUse().Result.ToList().Count();
-            return View();
+            CurrentTransformerVM transformer = new CurrentTransformerVM();
+
+            List<PointOfUse> pou = _serviceAPI.GetPointOfUse().Result.ToList();
+
+            return View(pou);
         }
 
         public IActionResult Privacy()

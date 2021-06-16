@@ -18,6 +18,5 @@ namespace WEBService.Models
         public float TransformationRatio { get; set; }
 
         public int ElectricityMeasuringPointId { get; set; }
-        public ElectricityMeasuringPoint ElectricityMeasuringPoint { get; set; }
     }
 }

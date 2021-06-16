@@ -16,10 +16,6 @@ namespace WEBService.Models
         public string Name { get; set; }
         public string Address { get; set; }
 
-        public Organization Organization { get; set; }
         public int OrganizationId { get; set; }
-
-        public List<PointOfUse> PointsOfUse { get; set; }
-
     }
 }

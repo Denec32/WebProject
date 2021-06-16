@@ -19,12 +19,5 @@ namespace WEBService.Models
         public PotentialTransformer PotentialTransformer { get; set; }
 
         public int PointOfUseId { get; set; }
-        public PointOfUse PointOfUse { get; set; }
-
-        //public MeteringDevice MeteringDevices { get; set; }
-        public List<MeteringDevice> MeteringDevices { get; set; }
-
-
-
     }
 }

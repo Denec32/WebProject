@@ -18,6 +18,5 @@ namespace WEBService.Models
         public string TransformerType { get; set; }
 
         public int ElectricityMeasuringPointId { get; set; }
-        public ElectricityMeasuringPoint ElectricityMeasuringPoint { get; set; }
     }
 }

@@ -19,6 +19,5 @@ namespace WEBService.Models
         public DateTime CheckDate { get; set; }
 
         public int ElectricityMeasuringPointId { get; set; }
-        public ElectricityMeasuringPoint ElectricityMeasuringPoint { get; set; }
     }
 }

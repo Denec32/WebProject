@@ -14,7 +14,5 @@ namespace WEBService.Models
 
         public string Name { get; set; }
         public string Address { get; set; }
-
-        public List<Subsidiary> Subsidiaries { get; set; }
     }
 }

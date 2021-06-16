@@ -9,9 +9,5 @@ namespace WEBService.Models
     public class MeteringDevice
     {
         public int MeteringDeviceId { get; set; }
-
-        //public ElectricityMeasuringPoint ElectricityMeasuringPoints { get; set; }
-        public List<ElectricityMeasuringPoint> ElectricityMeasuringPoints { get; set; }
-
     }
 }

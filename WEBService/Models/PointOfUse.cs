@@ -16,10 +16,5 @@ namespace WEBService.Models
         public string Address { get; set; }
 
         public int SubsidiaryId { get; set; }
-        public Subsidiary Subsidiary { get; set; }
-
-        public List<ElectricityMeasuringPoint> ElectricityMeasuringPoints { get; set; }
-        public List<SupplyEndpoint> SupplyEndpoints { get; set; }
-
     }
 }

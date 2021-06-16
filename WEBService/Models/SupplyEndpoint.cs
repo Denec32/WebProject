@@ -15,6 +15,5 @@ namespace WEBService.Models
         public float MaxPower { get; set; }
 
         public int PointOfUseId { get; set; }
-        public List<PointOfUse> PointsOfUse { get; set; }
     }
 }

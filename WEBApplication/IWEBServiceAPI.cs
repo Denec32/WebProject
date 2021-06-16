@@ -26,5 +26,8 @@ namespace WEBApplication
 
         [Get("/api/PointOfUseGet")]
         Task<IEnumerable<PointOfUse>> GetPointOfUse();
+
+        [Get("/api/ElectricityMeasuringPointGet")]
+        Task<IEnumerable<ElectricityMeasuringPoint>>GetElectricityMeasuringPoint();
     }
 }

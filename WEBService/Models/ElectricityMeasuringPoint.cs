@@ -14,10 +14,6 @@ namespace WEBService.Models
 
         public string Name{ get; set; }
 
-        public ElectricityMeter ElectricityMeter { get; set; }
-        public CurrentTransformer CurrentTransformer { get; set; }
-        public PotentialTransformer PotentialTransformer { get; set; }
-
         public int PointOfUseId { get; set; }
     }
 }

@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace WEBApplication.Models
 {
-    public class CurrentTransformerVM
+    public class PointOfUseViewModel
     {
-       public  string Name { get; set; } = "TT";
     }
 }

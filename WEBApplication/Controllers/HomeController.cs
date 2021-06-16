@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,8 +14,6 @@ namespace WEBApplication.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IWEBServiceAPI _serviceAPI;
 
-
- 
         public HomeController(ILogger<HomeController> logger, IWEBServiceAPI api)
         {
             _logger = logger;
@@ -25,14 +22,38 @@ namespace WEBApplication.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Count"] = GetPointOfUse().Result.ToList().Count();
-            CurrentTransformerVM transformer = new CurrentTransformerVM();
-
             List<PointOfUse> pou = _serviceAPI.GetPointOfUse().Result.ToList();
 
             return View(pou);
         }
 
+        public IActionResult CreateElectricityMeasuringPoint(int? id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
+
+        public IActionResult PotentialTransformer(int id)
+        {
+            List<PotentialTransformer> pt = _serviceAPI
+                .GetPotentialTransformer(id).Result.ToList();
+            return View(pt);
+        }
+
+        public IActionResult CurrentTransformer(int id)
+        {
+            List<CurrentTransformer> ct = _serviceAPI
+               .GetCurrentTransformer(id).Result.ToList();
+            return View(ct);
+        }
+
+        public IActionResult ElectricityMeter(int id)
+        {
+            List<ElectricityMeter> em = _serviceAPI
+               .GetElectricityMeter(id).Result.ToList();
+            return View(em);
+        }
+        
         public IActionResult Privacy()
         {
             return View();
@@ -54,7 +75,7 @@ namespace WEBApplication.Controllers
             return await _serviceAPI.GetElectricityMeter(id);
         }
 
-        public async Task<IEnumerable<PotentialTransformer>>GetPotentialTransformer (int id)
+        public async Task<IEnumerable<PotentialTransformer>> GetPotentialTransformer(int id)
         {
             return await _serviceAPI.GetPotentialTransformer(id);
         }
@@ -67,6 +88,11 @@ namespace WEBApplication.Controllers
         public async Task<IEnumerable<PointOfUse>> GetPointOfUse()
         {
             return await _serviceAPI.GetPointOfUse();
+        }
+
+        public async Task<IEnumerable<ElectricityMeasuringPoint>> GetElectricityMeasuringPoint()
+        {
+            return await _serviceAPI.GetElectricityMeasuringPoint();
         }
     }
 

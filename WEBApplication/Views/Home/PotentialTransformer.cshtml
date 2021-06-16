@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Трансформаторы напряжения";
+}
+@model List<PotentialTransformer>;
+
+<div class="text-center">
+    <h1 class="display-4">Список трансформаторов напряжения</h1>
+</div>
+<table class="table table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>Id</th>
+            <th>Номер</th>
+            <th>Тип трансформатора напряжения</th>
+            <th>Коэффициент трансформации</th>
+            <th>Дата проверки</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.PotentialTransformerId</td>
+            <td>@item.Number</td>
+            <td>@item.TransformerType</td>
+            <td>@item.TransformationRatio</td>
+            <td class="text-danger">@item.CheckDate</td>
+        </tr>
+        }
+    </tbody>
+</table>

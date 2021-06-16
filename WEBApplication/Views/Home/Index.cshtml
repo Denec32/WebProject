@@ -1,34 +1,36 @@
 ﻿@{
     ViewData["Title"] = "Главная страница";
-    int count = (int)ViewData["Count"];
 }
 @model List<PointOfUse>;
 
 <div class="text-center">
     <h1 class="display-4">Список объектов потребления</h1>
 </div>
-<table class="table table-hover">
+<table class="table table-hover table-responsive">
     <thead class="thead-light">
         <tr>
-            <th>Id</th>
+            <th hidden>Id</th>
             <th>Название объекта</th>
             <th>Адрес</th>
-            <th><a>Трансформаторы напряжения</a></th>
-            <th><a>Трансформаторы тока</a></th>
-            <th><a>Счетчики электрической энергии</a></th>
+            <th>Трансформаторы напряжения</th>
+            <th>Трансформаторы тока</th>
+            <th>Счетчики электрической энергии</th>
+            <th>Управление точками измерения</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.PointOfUseId</td>
+                <td hidden>@item.PointOfUseId</td>
                 <td>@item.Name</td>
                 <td>@item.Address</td>
-                <td><a href="~/Home/GetPotentialTransformer/@item.PointOfUseId">Закончился срок проверки</a></td>
-                <td><a href="~/Home/GetCurrentTransformer/@item.PointOfUseId">Закончился срок проверки</a></td>
-                <td><a href="~/Home/GetElectricityMeter/@item.PointOfUseId">Закончился срок проверки</a></td>
+                <td><a href="~/Home/PotentialTransformer/@item.PointOfUseId">Проверить состояние</a></td>
+                <td><a href="~/Home/CurrentTransformer/@item.PointOfUseId">Проверить состояние</a></td>
+                <td><a href="~/Home/ElectricityMeter/@item.PointOfUseId">Проверить состояние</a></td>
+                <td><a href="~/Home/CreateElectricityMeasuringPoint/@item.PointOfUseId">Добавить новую точку измерения электроэнергии</a></td>
             </tr>
         }
     </tbody>
 </table>
+

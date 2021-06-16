@@ -27,10 +27,22 @@ namespace WEBService.Controllers
                 return BadRequest();
             }
 
-            db.ElectricityMeasuringPoints.Add(measuringPointCombined.ElectricityMeasuringPoint);
-            db.CurrentTransformers.Add(measuringPointCombined.CurrentTransformer);
-            db.PotentialTransformers.Add(measuringPointCombined.PotentialTransformer);
-            db.ElectricityMeters.Add(measuringPointCombined.ElectricityMeter);
+            ElectricityMeasuringPoint emp = measuringPointCombined.ElectricityMeasuringPoint;
+            db.ElectricityMeasuringPoints.Add(emp);
+
+            await db.SaveChangesAsync();
+
+            CurrentTransformer ct = measuringPointCombined.CurrentTransformer;
+            ct.ElectricityMeasuringPointId = emp.ElectricityMeasuringPointId;
+            db.CurrentTransformers.Add(ct);
+
+            PotentialTransformer pt = measuringPointCombined.PotentialTransformer;
+            pt.ElectricityMeasuringPointId = emp.ElectricityMeasuringPointId;
+            db.PotentialTransformers.Add(pt);
+
+            ElectricityMeter em = measuringPointCombined.ElectricityMeter;
+            em.ElectricityMeasuringPointId = emp.ElectricityMeasuringPointId;
+            db.ElectricityMeters.Add(em);
 
             await db.SaveChangesAsync();
             return Ok(measuringPointCombined);

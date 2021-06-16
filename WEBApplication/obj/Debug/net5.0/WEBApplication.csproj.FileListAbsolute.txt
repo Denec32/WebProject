@@ -65,3 +65,7 @@ D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\WebActivatorEx.dll
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\WEBService.dll
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\WEBService.pdb
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\WEBApplication.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\PotentialTransformer.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\CurrentTransformer.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\ElectricityMeter.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\CreateElectricityMeasuringPoint.cshtml.g.cs

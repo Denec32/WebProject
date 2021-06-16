@@ -1,8 +1,29 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    int count = (int)ViewData["Count"];
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Тестовое задание</h1>
 </div>
+<table class="table table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>Id Объекта потребления</th>
+            <th><a>Трансформаторы напряжения</a></th>
+            <th><a>Трансформаторы тока</a></th>
+            <th><a>Счетчики электрической энергии</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 1; i <= count; i++)
+        {
+            <tr>
+                <td>@i</td>
+                <td><a href="~/Home/GetPotentialTransformer/@i">Закончился срок проверки</a></td>
+                <td><a href="~/Home/GetCurrentTransformer/@i">Закончился срок проверки</a></td>
+                <td><a href="~/Home/GetElectricityMeter/@i">Закончился срок проверки</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

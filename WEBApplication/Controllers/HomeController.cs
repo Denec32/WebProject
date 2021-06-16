@@ -25,6 +25,7 @@ namespace WEBApplication.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Count"] = GetPointOfUse().Result.ToList().Count();
             return View();
         }
 
@@ -57,6 +58,11 @@ namespace WEBApplication.Controllers
         public async Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined(MeasuringPointCombined measuringPointCombined)
         {
             return await _serviceAPI.PostMeasuringPointCombined(measuringPointCombined);
+        }
+
+        public async Task<IEnumerable<PointOfUse>> GetPointOfUse()
+        {
+            return await _serviceAPI.GetPointOfUse();
         }
     }
 

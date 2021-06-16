@@ -24,5 +24,7 @@ namespace WEBApplication
         [Post("/api/MeasuringPointInfo")]
         Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined(MeasuringPointCombined measuringPointCombined);
 
+        [Get("/api/PointOfUseGet")]
+        Task<IEnumerable<PointOfUse>> GetPointOfUse();
     }
 }

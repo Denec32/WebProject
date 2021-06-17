@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using WEBService.Models;
 
+
 namespace WEBApplication
 {
     public interface IWEBServiceAPI
@@ -21,7 +22,7 @@ namespace WEBApplication
         [Get("/api/PotentialTransformerGet/{id}")]
         Task<IEnumerable<PotentialTransformer>> GetPotentialTransformer(int id);
 
-        [Post("/api/MeasuringPointInfo")]
+        [Post("/api/MeasurementPointInfo")]
         Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined(MeasuringPointCombined measuringPointCombined);
 
         [Get("/api/PointOfUseGet")]

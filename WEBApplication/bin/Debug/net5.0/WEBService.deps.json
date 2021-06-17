@@ -33,6 +33,8 @@
     ".NETCoreApp,Version=v5.0": {
       "WEBService/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.7",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.7",
           "Refit.HttpClientFactory": "6.0.38",
@@ -68,19 +70,19 @@
           "Microsoft.AspNetCore.Hosting": "5.0.0.0",
           "Microsoft.AspNetCore.Hosting.Server.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Html.Abstractions": "5.0.0.0",
-          "Microsoft.AspNetCore.Http.Abstractions": "5.0.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Http.Connections.Common": "5.0.0.0",
           "Microsoft.AspNetCore.Http.Connections": "5.0.0.0",
           "Microsoft.AspNetCore.Http": "5.0.0.0",
           "Microsoft.AspNetCore.Http.Extensions": "5.0.0.0",
-          "Microsoft.AspNetCore.Http.Features": "5.0.0.0",
+          "Microsoft.AspNetCore.Http.Features.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.HttpOverrides": "5.0.0.0",
           "Microsoft.AspNetCore.HttpsPolicy": "5.0.0.0",
           "Microsoft.AspNetCore.Identity": "5.0.0.0",
           "Microsoft.AspNetCore.Localization": "5.0.0.0",
           "Microsoft.AspNetCore.Localization.Routing": "5.0.0.0",
           "Microsoft.AspNetCore.Metadata": "5.0.0.0",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "5.0.0.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.ApiExplorer": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Core": "5.0.0.0",
           "Microsoft.AspNetCore.Mvc.Cors": "5.0.0.0",
@@ -99,7 +101,7 @@
           "Microsoft.AspNetCore.ResponseCaching": "5.0.0.0",
           "Microsoft.AspNetCore.ResponseCompression": "5.0.0.0",
           "Microsoft.AspNetCore.Rewrite": "5.0.0.0",
-          "Microsoft.AspNetCore.Routing.Abstractions": "5.0.0.0",
+          "Microsoft.AspNetCore.Routing.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Routing": "5.0.0.0",
           "Microsoft.AspNetCore.Server.HttpSys": "5.0.0.0",
           "Microsoft.AspNetCore.Server.IIS": "5.0.0.0",
@@ -159,7 +161,7 @@
           "Microsoft.Extensions.Primitives.Reference": "5.0.0.0",
           "Microsoft.Extensions.WebEncoders": "5.0.0.0",
           "Microsoft.JSInterop": "5.0.0.0",
-          "Microsoft.Net.Http.Headers": "5.0.0.0",
+          "Microsoft.Net.Http.Headers.Reference": "5.0.0.0",
           "Microsoft.VisualBasic.Core": "10.0.6.0",
           "Microsoft.VisualBasic": "10.0.0.0",
           "Microsoft.Win32.Primitives": "5.0.0.0",
@@ -167,7 +169,7 @@
           "mscorlib": "4.0.0.0",
           "netstandard": "2.1.0.0",
           "System.AppContext": "5.0.0.0",
-          "System.Buffers": "5.0.0.0",
+          "System.Buffers.Reference": "5.0.0.0",
           "System.Collections.Concurrent": "5.0.0.0",
           "System.Collections": "5.0.0.0",
           "System.Collections.Immutable.Reference": "5.0.0.0",
@@ -289,7 +291,7 @@
           "System.Text.Encoding.CodePages": "5.0.0.0",
           "System.Text.Encoding": "5.0.0.0",
           "System.Text.Encoding.Extensions": "5.0.0.0",
-          "System.Text.Encodings.Web": "5.0.0.0",
+          "System.Text.Encodings.Web.Reference": "5.0.0.0",
           "System.Text.Json": "5.0.0.0",
           "System.Text.RegularExpressions": "5.0.0.0",
           "System.Threading.Channels": "5.0.0.0",
@@ -338,7 +340,7 @@
       "Microsoft.AspNet.WebApi.Client/4.0.20710": {
         "dependencies": {
           "Microsoft.Net.Http": "2.0.20710",
-          "Newtonsoft.Json": "7.0.1"
+          "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
           "lib/net40/System.Net.Http.Formatting.dll": {
@@ -377,6 +379,59 @@
         },
         "compile": {
           "lib/net40/System.Web.Http.WebHost.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.JsonPatch/5.0.7": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "assemblyVersion": "5.0.7.0",
+            "fileVersion": "5.0.721.26309"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.2.0",
+          "Microsoft.Net.Http.Headers": "2.2.0"
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/5.0.7": {
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "5.0.7",
+          "Newtonsoft.Json": "12.0.2",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "assemblyVersion": "5.0.7.0",
+            "fileVersion": "5.0.721.26309"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Routing.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         }
       },
       "Microsoft.CSharp/4.7.0": {},
@@ -506,6 +561,12 @@
       },
       "Microsoft.Extensions.Primitives/5.0.0": {},
       "Microsoft.Net.Http/2.0.20710": {},
+      "Microsoft.Net.Http.Headers/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.0",
+          "System.Buffers": "4.5.0"
+        }
+      },
       "Microsoft.OpenApi/1.2.3": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -528,15 +589,29 @@
           "lib/net40/Microsoft.Web.Infrastructure.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/12.0.2": {
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.1.18622"
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
           }
         },
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.2.22727"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
         }
       },
       "Npgsql/5.0.7": {
@@ -656,7 +731,7 @@
       "Swashbuckle.Core/5.6.0": {
         "dependencies": {
           "Microsoft.AspNet.WebApi.Core": "4.0.20710",
-          "Newtonsoft.Json": "7.0.1"
+          "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
           "lib/net40/Swashbuckle.Core.dll": {
@@ -668,6 +743,7 @@
           "lib/net40/Swashbuckle.Core.dll": {}
         }
       },
+      "System.Buffers/4.5.0": {},
       "System.Collections.Immutable/5.0.0": {
         "compile": {
           "lib/netstandard2.0/System.Collections.Immutable.dll": {}
@@ -695,6 +771,7 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
+      "System.Text.Encodings.Web/4.5.0": {},
       "WebActivatorEx/2.0.0": {
         "dependencies": {
           "Microsoft.Web.Infrastructure": "1.0.0"
@@ -889,7 +966,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Http.Abstractions/5.0.0.0": {
+      "Microsoft.AspNetCore.Http.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Http.Abstractions.dll": {}
         },
@@ -919,7 +996,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Http.Features/5.0.0.0": {
+      "Microsoft.AspNetCore.Http.Features.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Http.Features.dll": {}
         },
@@ -961,7 +1038,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Mvc.Abstractions/5.0.0.0": {
+      "Microsoft.AspNetCore.Mvc.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Mvc.Abstractions.dll": {}
         },
@@ -1075,7 +1152,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Routing.Abstractions/5.0.0.0": {
+      "Microsoft.AspNetCore.Routing.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Routing.Abstractions.dll": {}
         },
@@ -1435,7 +1512,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Net.Http.Headers/5.0.0.0": {
+      "Microsoft.Net.Http.Headers.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Net.Http.Headers.dll": {}
         },
@@ -1483,7 +1560,7 @@
         },
         "compileOnly": true
       },
-      "System.Buffers/5.0.0.0": {
+      "System.Buffers.Reference/5.0.0.0": {
         "compile": {
           "System.Buffers.dll": {}
         },
@@ -2215,7 +2292,7 @@
         },
         "compileOnly": true
       },
-      "System.Text.Encodings.Web/5.0.0.0": {
+      "System.Text.Encodings.Web.Reference/5.0.0.0": {
         "compile": {
           "System.Text.Encodings.Web.dll": {}
         },
@@ -2431,6 +2508,48 @@
       "path": "microsoft.aspnet.webapi.webhost/4.0.20710",
       "hashPath": "microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.JsonPatch/5.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IMindTqVCOLpY8uoDuZTOlzJyTDKMt8p6OAdlXMC9XFcGn80BW5VS3t+729p/+tW/lafxAS0cnrrklM59QfdYg==",
+      "path": "microsoft.aspnetcore.jsonpatch/5.0.7",
+      "hashPath": "microsoft.aspnetcore.jsonpatch.5.0.7.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ET6uZpfVbGR1NjCuLaLy197cQ3qZUjzl7EG5SL4GfJH/c9KRE89MMBrQegqWsh0w1iRUB/zQaK0anAjxa/pz4g==",
+      "path": "microsoft.aspnetcore.mvc.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/5.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iEiVcGFcj8GZUB9dLoVg2/Z4B5kORXyE6cdoo5EVPao0h0laZltcw5rSx0LwfLLBR253HjMGz3SYeiGZ5bC2Xw==",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/5.0.7",
+      "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.5.0.7.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Routing.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lRRaPN7jDlUCVCp9i0W+PB0trFaKB0bgMJD7hEJS9Uo4R9MXaMC8X2tJhPLmeVE3SGDdYI4QNKdVmhNvMJGgPQ==",
+      "path": "microsoft.aspnetcore.routing.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.routing.abstractions.2.2.0.nupkg.sha512"
+    },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -2564,6 +2683,13 @@
       "path": "microsoft.net.http/2.0.20710",
       "hashPath": "microsoft.net.http.2.0.20710.nupkg.sha512"
     },
+    "Microsoft.Net.Http.Headers/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iZNkjYqlo8sIOI0bQfpsSoMTmB/kyvmV2h225ihyZT33aTp48ZpF6qYnXxzSXmHt8DpBAwBTX+1s1UFLbYfZKg==",
+      "path": "microsoft.net.http.headers/2.2.0",
+      "hashPath": "microsoft.net.http.headers.2.2.0.nupkg.sha512"
+    },
     "Microsoft.OpenApi/1.2.3": {
       "type": "package",
       "serviceable": true,
@@ -2578,12 +2704,19 @@
       "path": "microsoft.web.infrastructure/1.0.0",
       "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/7.0.1": {
+    "Newtonsoft.Json/12.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
-      "path": "newtonsoft.json/7.0.1",
-      "hashPath": "newtonsoft.json.7.0.1.nupkg.sha512"
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "Newtonsoft.Json.Bson/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
+      "path": "newtonsoft.json.bson/1.0.2",
+      "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
     },
     "Npgsql/5.0.7": {
       "type": "package",
@@ -2655,6 +2788,13 @@
       "path": "swashbuckle.core/5.6.0",
       "hashPath": "swashbuckle.core.5.6.0.nupkg.sha512"
     },
+    "System.Buffers/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+      "path": "system.buffers/4.5.0",
+      "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+    },
     "System.Collections.Immutable/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2689,6 +2829,13 @@
       "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
       "path": "system.runtime.compilerservices.unsafe/4.6.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "path": "system.text.encodings.web/4.5.0",
+      "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
     },
     "WebActivatorEx/2.0.0": {
       "type": "package",
@@ -2847,7 +2994,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Http.Abstractions/5.0.0.0": {
+    "Microsoft.AspNetCore.Http.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2872,7 +3019,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Http.Features/5.0.0.0": {
+    "Microsoft.AspNetCore.Http.Features.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -2907,7 +3054,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Mvc.Abstractions/5.0.0.0": {
+    "Microsoft.AspNetCore.Mvc.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3002,7 +3149,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Routing.Abstractions/5.0.0.0": {
+    "Microsoft.AspNetCore.Routing.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3302,7 +3449,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Net.Http.Headers/5.0.0.0": {
+    "Microsoft.Net.Http.Headers.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3342,7 +3489,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Buffers/5.0.0.0": {
+    "System.Buffers.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -3952,7 +4099,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Text.Encodings.Web/5.0.0.0": {
+    "System.Text.Encodings.Web.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

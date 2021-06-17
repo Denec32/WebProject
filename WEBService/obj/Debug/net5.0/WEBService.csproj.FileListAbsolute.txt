@@ -45,3 +45,6 @@ D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.EntityFrameworkCore
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Refit.dll
 D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Refit.HttpClientFactory.dll
 D:\Projects\WEBService\WEBService\obj\Debug\net5.0\WEBService.csproj.AssemblyReference.cache
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Projects\WEBService\WEBService\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

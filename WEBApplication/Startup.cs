@@ -27,6 +27,7 @@ namespace WEBApplication
             services.AddControllersWithViews().AddNewtonsoftJson();
             services.AddRefitClient<IWEBServiceAPI>()
                 .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:44340"));
+                //.ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:8050"));
             services.AddControllers().AddNewtonsoftJson();
 
         }

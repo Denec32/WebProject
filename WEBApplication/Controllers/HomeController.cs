@@ -24,6 +24,25 @@ namespace WEBApplication.Controllers
         {
             List<PointOfUse> pou = _serviceAPI.GetPointOfUse().Result.ToList();
 
+            List<UsageAndMeasuringPointViewModel> vm = new List<UsageAndMeasuringPointViewModel>();
+            for (int i = 0; i < pou.Count(); i++)
+            {
+                vm.Add(new UsageAndMeasuringPointViewModel() { PointOfUse = pou[i]});
+            }
+            List<ElectricityMeasuringPoint> emp = _serviceAPI.GetElectricityMeasuringPoint().Result.ToList();
+
+            for (int i = 0; i < vm.Count; i++)
+            {
+                vm[i].ElectricityMeasuringPoint = new List<ElectricityMeasuringPoint>();
+                foreach (var item in emp)
+                {
+                    if (vm[i].PointOfUse.PointOfUseId == item.PointOfUseId)
+                    {
+                        vm[i].ElectricityMeasuringPoint.Add(item);
+                    }
+                }
+            }
+
             return View(pou);
         }
 
@@ -95,5 +114,4 @@ namespace WEBApplication.Controllers
             return await _serviceAPI.GetElectricityMeasuringPoint();
         }
     }
-
 }

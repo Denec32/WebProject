@@ -2,11 +2,11 @@
     ViewData["Title"] = "Добавление новой точки";
 }
 
-<form asp-area="" asp-controller="Home" asp-action="PostMeasuringPointCombined">
+<form asp-area="" asp-controller="Home" asp-action="PostMP">
     <h2>Точка измерения электроэнергии</h2>
     <div class="border-bottom">
         <div class="form-group">
-            <input hidden value="@ViewBag.Id" name="ElectricityMeasuringPoint.PointOfUseId"/>
+            <input hidden value="@ViewBag.Id" name="ElectricityMeasuringPoint.PointOfUseId" />
             <label for="ElectricityMeasuringPoint.Name">Название точки измерения электроэнергии</label>
             <input id="ElectricityMeasuringPoint.Name" class="form-control" placeholder="Введите название точки измерения" name="ElectricityMeasuringPoint.Name">
         </div>

@@ -68,8 +68,9 @@
             @Html.TextBoxFor(m => m.ElectricityMeter.CheckDate, new { @class = "form-control", @type = "datetime-local" })
         </div>
     </div>
-    <p><input type="submit" value="Отправить" /></p>
+    <p><input class="btn btn-primary float-right" type="submit" value="Отправить" /></p>
 }
+<button class="btn btn-dark float-righ" onclick="FillForm();">Заполнить форму</button>
 
                 @*<form asp-area="" asp-controller="Home" asp-action="PostMeasuringPointCombined">
             <h2>Точка измерения электроэнергии</h2>
@@ -140,4 +141,3 @@
             <button type="submit" class="btn btn-primary float-right">Создать</button>
         </form>*@
 
-                <button class="btn btn-primary float-righ" onclick="FillForm();">Заполнить форму</button>

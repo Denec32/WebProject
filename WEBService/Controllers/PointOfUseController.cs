@@ -11,10 +11,10 @@ namespace WEBService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PointOfUseGetController : ControllerBase
+    public class PointOfUseController : ControllerBase
     {
         WebServiceDBContext db;
-        public PointOfUseGetController(WebServiceDBContext context)
+        public PointOfUseController(WebServiceDBContext context)
         {
             db = context;
         }

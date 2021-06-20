@@ -10,7 +10,7 @@ namespace WEBService.Models
     public class CurrentTransformer
     {
         [Key]
-        public int CurrentTransformerId { get; set; }
+        public int ID { get; set; }
 
         public string Number { get; set; }
         public double TransformationRatio { get; set; }

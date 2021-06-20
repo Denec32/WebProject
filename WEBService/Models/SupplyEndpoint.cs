@@ -10,7 +10,7 @@ namespace WEBService.Models
     public class SupplyEndpoint
     {
         [Key]
-        public int SupplyEndPointId { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public float MaxPower { get; set; }
 

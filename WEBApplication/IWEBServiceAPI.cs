@@ -12,22 +12,22 @@ namespace WEBApplication
     public interface IWEBServiceAPI
     {
 
-        [Get("/api/CurrentTransformerGet/{id}")]
+        [Get("/api/CurrentTransformer/{id}")]
         Task<IEnumerable<CurrentTransformer>> GetCurrentTransformer(int id);
 
-        [Get("/api/ElectricityMeterGet/{id}")]
+        [Get("/api/ElectricityMeter/{id}")]
         Task<IEnumerable<ElectricityMeter>> GetElectricityMeter(int id);
 
-        [Get("/api/PotentialTransformerGet/{id}")]
+        [Get("/api/PotentialTransformer/{id}")]
         Task<IEnumerable<PotentialTransformer>> GetPotentialTransformer(int id);
 
-        [Post("/api/MeasurementPointInfo")]
+        [Post("/api/MeasuringPointCombined")]
         Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined([Microsoft.AspNetCore.Mvc.FromBody] MeasuringPointCombined measuringPointCombined);
 
-        [Get("/api/PointOfUseGet")]
+        [Get("/api/PointOfUse")]
         Task<IEnumerable<PointOfUse>> GetPointOfUse();
 
-        [Get("/api/ElectricityMeasuringPointGet")]
+        [Get("/api/ElectricityMeasuringPoint")]
         Task<IEnumerable<ElectricityMeasuringPoint>>GetElectricityMeasuringPoint();
     }
 }

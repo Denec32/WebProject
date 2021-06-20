@@ -27,6 +27,7 @@ namespace WEBService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddDbContext<WebServiceDBContext>();
 
             services.AddSwaggerGen();

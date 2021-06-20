@@ -22,13 +22,13 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td hidden>@item.PointOfUse.PointOfUseId</td>
+                <td hidden>@item.PointOfUse.ID</td>
                 <td>@item.PointOfUse.Name</td>
                 <td>@item.PointOfUse.Address</td>
-                <td><a href="~/Home/PotentialTransformer/@item.PointOfUse.PointOfUseId">Проверить состояние</a></td>
-                <td><a href="~/Home/CurrentTransformer/@item.PointOfUse.PointOfUseId">Проверить состояние</a></td>
-                <td><a href="~/Home/ElectricityMeter/@item.PointOfUse.PointOfUseId">Проверить состояние</a></td>
-                <td><a href="~/Home/CreateElectricityMeasuringPoint/@item.PointOfUse.PointOfUseId">Добавить новую точку измерения электроэнергии</a></td>
+                <td><a href="~/Home/PotentialTransformer/@item.PointOfUse.ID">Проверить состояние</a></td>
+                <td><a href="~/Home/CurrentTransformer/@item.PointOfUse.ID">Проверить состояние</a></td>
+                <td><a href="~/Home/ElectricityMeter/@item.PointOfUse.ID">Проверить состояние</a></td>
+                <td><a href="~/Home/CreateMeasuringPoint/@item.PointOfUse.ID">Добавить новую точку измерения электроэнергии</a></td>
             </tr>
         }
     </tbody>
@@ -50,7 +50,7 @@
             @foreach (var val in item.ElectricityMeasuringPoint)
             {
             <tr>
-                <td>@val.ElectricityMeasuringPointId</td>
+                <td>@val.ID</td>
                 <td>@val.Name</td>
             </tr>
             }

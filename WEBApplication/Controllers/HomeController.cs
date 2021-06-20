@@ -36,7 +36,7 @@ namespace WEBApplication.Controllers
                 vm[i].ElectricityMeasuringPoint = new List<ElectricityMeasuringPoint>();
                 foreach (var item in emp)
                 {
-                    if (vm[i].PointOfUse.PointOfUseId == item.PointOfUseId)
+                    if (vm[i].PointOfUse.ID == item.PointOfUseId)
                     {
                         vm[i].ElectricityMeasuringPoint.Add(item);
                     }
@@ -45,7 +45,7 @@ namespace WEBApplication.Controllers
             return View(vm);
         }
 
-        public IActionResult CreateElectricityMeasuringPoint(int? id)
+        public IActionResult CreateMeasuringPoint(int? id)
         {
             ViewBag.Id = id;
             return View();
@@ -93,19 +93,28 @@ namespace WEBApplication.Controllers
             return await _serviceAPI.GetElectricityMeter(id);
         }
 
+        /// <summary>
+        /// Возвращает список всех трансфораторов напряжения выбранного объекта потребления.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<PotentialTransformer>> GetPotentialTransformer(int id)
         {
             return await _serviceAPI.GetPotentialTransformer(id);
         }
 
-        public async Task<ActionResult<MeasuringPointCombined>> 
-            PostMeasuringPointCombined(MeasuringPointCombined measuringPointCombined)
+        /// <summary>
+        /// размещает новую точку измерения, ее трансформаторы и счетчик.
+        /// </summary>
+        /// <param name="mp"></param>
+        /// <returns></returns>
+        public async Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined(MeasuringPointCombined mp)
         {
-            return await _serviceAPI.PostMeasuringPointCombined(measuringPointCombined);
+            return await _serviceAPI.PostMeasuringPointCombined(mp);
         }
 
         /// <summary>
-        /// Описание методад
+        /// Возвращает список всех объектов потребления.
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<PointOfUse>> GetPointOfUse()
@@ -113,6 +122,10 @@ namespace WEBApplication.Controllers
             return await _serviceAPI.GetPointOfUse();
         }
 
+        /// <summary>
+        /// Возвращает список всех точек измерения электроэнергии.
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<ElectricityMeasuringPoint>> GetElectricityMeasuringPoint()
         {
             return await _serviceAPI.GetElectricityMeasuringPoint();

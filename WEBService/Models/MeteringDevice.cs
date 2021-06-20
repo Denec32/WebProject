@@ -8,6 +8,6 @@ namespace WEBService.Models
     // Расчетный прибор учета
     public class MeteringDevice
     {
-        public int MeteringDeviceId { get; set; }
+        public int ID { get; set; }
     }
 }

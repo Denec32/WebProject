@@ -68,8 +68,8 @@ D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\WEBApplication.MvcApplica
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\PotentialTransformer.cshtml.g.cs
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\CurrentTransformer.cshtml.g.cs
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\ElectricityMeter.cshtml.g.cs
-D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\CreateElectricityMeasuringPoint.cshtml.g.cs
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\System.Text.Json.dll
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\CreateMeasuringPoint.cshtml.g.cs

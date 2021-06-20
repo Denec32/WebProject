@@ -23,7 +23,7 @@ namespace WEBService.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(@"Host=localhost;Username=postgres; Password=25647;Port=5432;Database=projectdb");
+            optionsBuilder.UseNpgsql(@"Host=localhost;Username=postgres; Password=25647;Port=5432;Database=PowerSupplyCompany");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -11,7 +11,7 @@ namespace WEBService.Data
             modelBuilder.Entity<Organization>().HasData(
                 new Organization
                 {
-                    OrganizationId = 1,
+                    ID = 1,
                     Name = "Parent",
                     Address = "ул. 8 Марта 35"
                 });
@@ -19,7 +19,7 @@ namespace WEBService.Data
             modelBuilder.Entity<Subsidiary>().HasData(
                 new Subsidiary
                 {
-                    SubsidiaryId = 1,
+                    ID = 1,
                     OrganizationId = 1,
                     Name = "Child",
                     Address = "ул. Пушкина 12А"
@@ -28,7 +28,7 @@ namespace WEBService.Data
             modelBuilder.Entity<PointOfUse>().HasData(
                 new PointOfUse
                 {
-                    PointOfUseId = 1,
+                    ID = 1,
                     SubsidiaryId = 1,
                     Address = "ул. Калинина 12",
                     Name = "Consumer",
@@ -36,7 +36,7 @@ namespace WEBService.Data
             modelBuilder.Entity<ElectricityMeasuringPoint>().HasData(
                 new ElectricityMeasuringPoint
                 {
-                    ElectricityMeasuringPointId = 1,
+                    ID = 1,
                     Name = "Point 1",
                     PointOfUseId = 1
                 });
@@ -44,7 +44,7 @@ namespace WEBService.Data
             modelBuilder.Entity<ElectricityMeter>().HasData(
                 new ElectricityMeter
                 {
-                    ElectricityMeterId = 1,
+                    ID = 1,
                     ElectricityMeasuringPointId = 1,
                     Number = "12AB",
                     CheckDate = DateTime.Now,
@@ -54,7 +54,7 @@ namespace WEBService.Data
             modelBuilder.Entity<CurrentTransformer>().HasData(
                 new CurrentTransformer
                 {
-                    CurrentTransformerId = 1,
+                    ID = 1,
                     ElectricityMeasuringPointId = 1,
                     Number = "12AC",
                     CheckDate = DateTime.Now,
@@ -65,7 +65,7 @@ namespace WEBService.Data
             modelBuilder.Entity<PotentialTransformer>().HasData(
                 new PotentialTransformer
                 {
-                    PotentialTransformerId = 1,
+                    ID = 1,
                     ElectricityMeasuringPointId = 1,
                     Number = "12AD",
                     CheckDate = DateTime.Now,
@@ -76,7 +76,7 @@ namespace WEBService.Data
             modelBuilder.Entity<SupplyEndpoint>().HasData(
                 new SupplyEndpoint
                 {
-                    SupplyEndPointId = 1,
+                    ID = 1,
                     PointOfUseId = 1,
                     Name = "EndPoint 1",
                     MaxPower = 12
@@ -85,7 +85,7 @@ namespace WEBService.Data
             modelBuilder.Entity<MeteringDevice>().HasData(
                 new MeteringDevice
                 {
-                    MeteringDeviceId = 1
+                    ID = 1
                 });
 
         }

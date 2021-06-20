@@ -10,7 +10,7 @@ namespace WEBService.Models
     public class PotentialTransformer
     {
         [Key]
-        public int PotentialTransformerId { get; set; }
+        public int ID { get; set; }
 
         public string Number { get; set; }
         public string TransformerType { get; set; }

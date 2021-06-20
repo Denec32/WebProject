@@ -11,11 +11,11 @@ namespace WEBService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class MeasurementPointInfoController : ControllerBase
+    public class MeasuringPointCombinedController : ControllerBase
     {
         WebServiceDBContext db;
 
-        public MeasurementPointInfoController(WebServiceDBContext context)
+        public MeasuringPointCombinedController(WebServiceDBContext context)
         {
             db = context;
         }
@@ -35,15 +35,15 @@ namespace WEBService.Controllers
             await db.SaveChangesAsync();
             
             CurrentTransformer ct = measuringPointCombined.CurrentTransformer;
-            ct.ElectricityMeasuringPointId = emp.ElectricityMeasuringPointId;
+            ct.ElectricityMeasuringPointId = emp.ID;
             db.CurrentTransformers.Add(ct);
 
             PotentialTransformer pt = measuringPointCombined.PotentialTransformer;
-            pt.ElectricityMeasuringPointId = emp.ElectricityMeasuringPointId;
+            pt.ElectricityMeasuringPointId = emp.ID;
             db.PotentialTransformers.Add(pt);
 
             ElectricityMeter em = measuringPointCombined.ElectricityMeter;
-            em.ElectricityMeasuringPointId = emp.ElectricityMeasuringPointId;
+            em.ElectricityMeasuringPointId = emp.ID;
             db.ElectricityMeters.Add(em);
 
             await db.SaveChangesAsync(); 

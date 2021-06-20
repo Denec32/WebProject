@@ -10,7 +10,7 @@ namespace WEBService.Models
     public class ElectricityMeasuringPoint
     {
         [Key]
-        public int ElectricityMeasuringPointId { get; set; }
+        public int ID { get; set; }
 
         public string Name{ get; set; }
 

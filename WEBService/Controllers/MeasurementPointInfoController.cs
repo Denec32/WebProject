@@ -21,7 +21,7 @@ namespace WEBService.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<MeasuringPointCombined>> Post(MeasuringPointCombined measuringPointCombined)
+        public async Task<ActionResult<MeasuringPointCombined>> Post([FromBody]MeasuringPointCombined measuringPointCombined)
         {
             
             if (measuringPointCombined == null)

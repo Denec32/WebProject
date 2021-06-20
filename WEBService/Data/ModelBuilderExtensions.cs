@@ -59,7 +59,7 @@ namespace WEBService.Data
                     Number = "12AC",
                     CheckDate = DateTime.Now,
                     TransformerType = "C1",
-                    TransformationRatio = 1.2f
+                    TransformationRatio = 1.2
                 });
 
             modelBuilder.Entity<PotentialTransformer>().HasData(
@@ -70,7 +70,7 @@ namespace WEBService.Data
                     Number = "12AD",
                     CheckDate = DateTime.Now,
                     TransformerType = "P1",
-                    TransformationRatio = 1.8f,
+                    TransformationRatio = 1.8
                 });
 
             modelBuilder.Entity<SupplyEndpoint>().HasData(
@@ -79,7 +79,7 @@ namespace WEBService.Data
                     SupplyEndPointId = 1,
                     PointOfUseId = 1,
                     Name = "EndPoint 1",
-                    MaxPower = 12,
+                    MaxPower = 12
                 });
 
             modelBuilder.Entity<MeteringDevice>().HasData(

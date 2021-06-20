@@ -15,7 +15,7 @@ namespace WEBService.Models
         public string Number { get; set; }
         public string TransformerType { get; set; }
         public DateTime CheckDate { get; set; }
-        public float TransformationRatio { get; set; }
+        public double TransformationRatio { get; set; }
 
         public int ElectricityMeasuringPointId { get; set; }
     }

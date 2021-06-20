@@ -42,8 +42,7 @@ namespace WEBApplication.Controllers
                     }
                 }
             }
-
-            return View(pou);
+            return View(vm);
         }
 
         public IActionResult CreateElectricityMeasuringPoint(int? id)
@@ -99,11 +98,16 @@ namespace WEBApplication.Controllers
             return await _serviceAPI.GetPotentialTransformer(id);
         }
 
-        public async Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined(MeasuringPointCombined measuringPointCombined)
+        public async Task<ActionResult<MeasuringPointCombined>> 
+            PostMeasuringPointCombined(MeasuringPointCombined measuringPointCombined)
         {
             return await _serviceAPI.PostMeasuringPointCombined(measuringPointCombined);
         }
 
+        /// <summary>
+        /// Описание методад
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<PointOfUse>> GetPointOfUse()
         {
             return await _serviceAPI.GetPointOfUse();

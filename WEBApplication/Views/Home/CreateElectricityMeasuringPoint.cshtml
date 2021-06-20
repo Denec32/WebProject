@@ -1,73 +1,143 @@
-﻿@{
-    ViewData["Title"] = "Добавление новой точки";
-}
+﻿@{ ViewData["Title"] = "Добавление новой точки"; }
+@model MeasuringPointCombined
 
-<form asp-area="" asp-controller="Home" asp-action="PostMP">
+@using (Html.BeginForm("PostMeasuringPointCombined", "Home", FormMethod.Post))
+{
     <h2>Точка измерения электроэнергии</h2>
-    <div class="border-bottom">
-        <div class="form-group">
-            <input hidden value="@ViewBag.Id" name="ElectricityMeasuringPoint.PointOfUseId" />
-            <label for="ElectricityMeasuringPoint.Name">Название точки измерения электроэнергии</label>
-            <input id="ElectricityMeasuringPoint.Name" class="form-control" placeholder="Введите название точки измерения" name="ElectricityMeasuringPoint.Name">
-        </div>
-    </div>
+    <div class="form-group">
+        @*Html.HiddenFor(m => m.ElectricityMeasuringPoint.PointOfUseId)*@
+        @*Html.TextBoxFor(m => m.ElectricityMeasuringPoint.PointOfUseId, new { @Value = "12" })*@
+        <input hidden value="@ViewBag.Id" name="ElectricityMeasuringPoint.PointOfUseId" />
 
-    <h2>Счетчик электрической энергии</h2>
-    <div class="border-bottom row">
-        <div class="form-group col">
-            <label for="ElectricityMeter.Number">Номер</label>
-            <input id="ElectricityMeter.Number" class="form-control" placeholder="" name="ElectricityMeter.Number">
-        </div>
-        <div class="form-group col">
-            <label for="ElectricityMeter.MeterType">Тип счетчика</label>
-            <input id="ElectricityMeter.MeterType" class="form-control" placeholder="" name="ElectricityMeter.MeterType">
-        </div>
-        <div class="form-group col">
-            <label for="ElectricityMeter.CheckDate">Дата проверки</label>
-            <input type="datetime-local" id="ElectricityMeter.CheckDate" class="form-control" placeholder="" name="ElectricityMeter.CheckDate">
-        </div>
+        @Html.LabelFor(m => m.ElectricityMeasuringPoint.Name, "Название точки измерения электроэнергии")
+        @Html.TextBoxFor(m => m.ElectricityMeasuringPoint.Name, new { @class = "form-control" })
     </div>
 
     <h2>Трансформатор тока</h2>
-    <div class="border-bottom row">
-
+    <div class="form-group row">
         <div class="form-group col">
-            <label for="CurrentTransformer.Number">Номер</label>
-            <input id="CurrentTransformer.Number" class="form-control" placeholder="" name="CurrentTransformer.Number">
+            @Html.LabelFor(m => m.CurrentTransformer.Number, "Номер трансформатора")
+            @Html.TextBoxFor(m => m.CurrentTransformer.Number, new { @class = "form-control" })
         </div>
         <div class="form-group col">
-            <label for="CurrentTransformer.MeterType">Тип трансформатора тока</label>
-            <input id="CurrentTransformer.MeterType" class="form-control" placeholder="" name="CurrentTransformer.MeterType">
+            @Html.LabelFor(m => m.CurrentTransformer.TransformationRatio, "Коэффициент трансформации")
+            @Html.TextBoxFor(m => m.CurrentTransformer.TransformationRatio, new { @class = "form-control" })
         </div>
         <div class="form-group col">
-            <label for="CurrentTransformer.TransformationRatio">Коэффициент трансформации</label>
-            <input id="CurrentTransformer.TransformationRatio" class="form-control" placeholder="" name="CurrentTransformer.TransformationRatio">
+            @Html.LabelFor(m => m.CurrentTransformer.TransformerType, "Тип трансформатора")
+            @Html.TextBoxFor(m => m.CurrentTransformer.TransformerType, new { @class = "form-control" })
         </div>
         <div class="form-group col">
-            <label for="CurrentTransformer.CheckDate">Дата проверки</label>
-            <input type="datetime-local" id="CurrentTransformer.CheckDate" class="form-control" placeholder="" name="CurrentTransformer.CheckDate">
+            @Html.LabelFor(m => m.CurrentTransformer.CheckDate, "Дата проверки")
+            @Html.TextBoxFor(m => m.CurrentTransformer.CheckDate, new { @class = "form-control", @type = "datetime-local" })
         </div>
     </div>
 
     <h2>Трансформатор напряжения</h2>
-    <div class=" row">
+    <div class="form-group row">
         <div class="form-group col">
-            <label for="PotentialTransformer.Number">Номер</label>
-            <input id="PotentialTransformer.Number" class="form-control" placeholder="" name="PotentialTransformer.Number">
+            @Html.LabelFor(m => m.PotentialTransformer.Number, "Номер трансформатора")
+            @Html.TextBoxFor(m => m.PotentialTransformer.Number, new { @class = "form-control" })
         </div>
         <div class="form-group col">
-            <label for="PotentialTransformer.MeterType">Тип трансформатора напряжения</label>
-            <input id="PotentialTransformer.MeterType" class="form-control" placeholder="" name="PotentialTransformer.MeterType">
+            @Html.LabelFor(m => m.PotentialTransformer.TransformationRatio, "Коэффициент трансформации")
+            @Html.TextBoxFor(m => m.PotentialTransformer.TransformationRatio, new { @class = "form-control" })
         </div>
         <div class="form-group col">
-            <label for="PotentialTransformer.TransformationRatio">Коэффициент трансформации</label>
-            <input id="PotentialTransformer.TransformationRatio" class="form-control" placeholder="" name="PotentialTransformer.TransformationRatio">
+            @Html.LabelFor(m => m.PotentialTransformer.TransformerType, "Тип трансформатора")
+            @Html.TextBoxFor(m => m.PotentialTransformer.TransformerType, new { @class = "form-control" })
         </div>
         <div class="form-group col">
-            <label for="PotentialTransformer.CheckDate">Дата проверки</label>
-            <input type="datetime-local" id="PotentialTransformer.CheckDate" class="form-control" placeholder="" name="PotentialTransformer.CheckDate">
+            @Html.LabelFor(m => m.PotentialTransformer.CheckDate, "Дата проверки")
+            @Html.TextBoxFor(m => m.PotentialTransformer.CheckDate, new { @class = "form-control", @type = "datetime-local" })
         </div>
     </div>
-    <button type="submit" class="btn btn-primary float-right">Создать</button>
 
-</form>
+    <h2>Счетчик электрической энергии</h2>
+    <div class="form-group row">
+        <div class="form-group col">
+            @Html.LabelFor(m => m.ElectricityMeter.Number, "Номер счетчика")
+            @Html.TextBoxFor(m => m.ElectricityMeter.Number, new { @class = "form-control" })
+        </div>
+        <div class="form-group col">
+            @Html.LabelFor(m => m.ElectricityMeter.MeterType, "Тип счетчика")
+            @Html.TextBoxFor(m => m.ElectricityMeter.MeterType, new { @class = "form-control" })
+        </div>
+        <div class="form-group col">
+            @Html.LabelFor(m => m.ElectricityMeter.CheckDate, "Дата проверки")
+            @Html.TextBoxFor(m => m.ElectricityMeter.CheckDate, new { @class = "form-control", @type = "datetime-local" })
+        </div>
+    </div>
+    <p><input type="submit" value="Отправить" /></p>
+}
+
+                @*<form asp-area="" asp-controller="Home" asp-action="PostMeasuringPointCombined">
+            <h2>Точка измерения электроэнергии</h2>
+            <div class="border-bottom">
+                <div class="form-group">
+                    <input hidden value="@ViewBag.Id" name="ElectricityMeasuringPoint.PointOfUseId" />
+                    <label for="ElectricityMeasuringPoint.Name">Название точки измерения электроэнергии</label>
+                    <input id="ElectricityMeasuringPoint.Name" class="form-control" placeholder="Введите название точки измерения" name="ElectricityMeasuringPoint.Name">
+                </div>
+            </div>
+
+            <h2>Счетчик электрической энергии</h2>
+            <div class="border-bottom row">
+                <div class="form-group col">
+                    <label for="ElectricityMeter.Number">Номер</label>
+                    <input id="ElectricityMeter.Number" class="form-control" placeholder="" name="ElectricityMeter.Number">
+                </div>
+                <div class="form-group col">
+                    <label for="ElectricityMeter.MeterType">Тип счетчика</label>
+                    <input id="ElectricityMeter.MeterType" class="form-control" placeholder="" name="ElectricityMeter.MeterType">
+                </div>
+                <div class="form-group col">
+                    <label for="ElectricityMeter.CheckDate">Дата проверки</label>
+                    <input type="datetime-local" id="ElectricityMeter.CheckDate" class="form-control" placeholder="" name="ElectricityMeter.CheckDate">
+                </div>
+            </div>
+
+            <h2>Трансформатор тока</h2>
+            <div class="border-bottom row">
+
+                <div class="form-group col">
+                    <label for="CurrentTransformer.Number">Номер</label>
+                    <input id="CurrentTransformer.Number" class="form-control" placeholder="" name="CurrentTransformer.Number">
+                </div>
+                <div class="form-group col">
+                    <label for="CurrentTransformer.TransformerType">Тип трансформатора тока</label>
+                    <input id="CurrentTransformer.TransformerType" class="form-control" placeholder="" name="CurrentTransformer.TransformerType">
+                </div>
+                <div class="form-group col">
+                    <label for="CurrentTransformer.TransformationRatio">Коэффициент трансформации</label>
+                    <input type="number" step="0.01" id="CurrentTransformer.TransformationRatio" class="form-control" placeholder="" name="CurrentTransformer.TransformationRatio">
+                </div>
+                <div class="form-group col">
+                    <label for="CurrentTransformer.CheckDate">Дата проверки</label>
+                    <input type="datetime-local" id="CurrentTransformer.CheckDate" class="form-control" placeholder="" name="CurrentTransformer.CheckDate">
+                </div>
+            </div>
+
+            <h2>Трансформатор напряжения</h2>
+            <div class=" row">
+                <div class="form-group col">
+                    <label for="PotentialTransformer.Number">Номер</label>
+                    <input id="PotentialTransformer.Number" class="form-control" placeholder="" name="PotentialTransformer.Number">
+                </div>
+                <div class="form-group col">
+                    <label for="PotentialTransformer.TransformerType">Тип трансформатора напряжения</label>
+                    <input id="PotentialTransformer.TransformerType" class="form-control" placeholder="" name="PotentialTransformer.TransformerType">
+                </div>
+                <div class="form-group col">
+                    <label for="PotentialTransformer.TransformationRatio">Коэффициент трансформации</label>
+                    <input type="number" step="0.01" id="PotentialTransformer.TransformationRatio" class="form-control" placeholder="" name="PotentialTransformer.TransformationRatio">
+                </div>
+                <div class="form-group col">
+                    <label for="PotentialTransformer.CheckDate">Дата проверки</label>
+                    <input type="datetime-local" id="PotentialTransformer.CheckDate" class="form-control" placeholder="" name="PotentialTransformer.CheckDate">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Создать</button>
+        </form>*@
+
+                <button class="btn btn-primary float-righ" onclick="FillForm();">Заполнить форму</button>

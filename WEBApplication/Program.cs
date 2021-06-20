@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace WEBApplication
 {
@@ -20,7 +21,10 @@ namespace WEBApplication
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                    
+                    .UseStartup<Startup>()
+                    .UseKestrel(opt => opt.Listen(IPAddress.Any, 5005));
                 });
     }
 }

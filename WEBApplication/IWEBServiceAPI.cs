@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using WEBService.Models;
 
-
 namespace WEBApplication
 {
     public interface IWEBServiceAPI
@@ -23,7 +22,7 @@ namespace WEBApplication
         Task<IEnumerable<PotentialTransformer>> GetPotentialTransformer(int id);
 
         [Post("/api/MeasurementPointInfo")]
-        Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined(MeasuringPointCombined measuringPointCombined);
+        Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined([Microsoft.AspNetCore.Mvc.FromBody] MeasuringPointCombined measuringPointCombined);
 
         [Get("/api/PointOfUseGet")]
         Task<IEnumerable<PointOfUse>> GetPointOfUse();

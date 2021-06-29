@@ -103,6 +103,7 @@ namespace WEBApplication.Controllers
             return await _serviceAPI.GetPotentialTransformer(id);
         }
 
+        /*
         /// <summary>
         /// размещает новую точку измерения, ее трансформаторы и счетчик.
         /// </summary>
@@ -111,6 +112,13 @@ namespace WEBApplication.Controllers
         public async Task<ActionResult<MeasuringPointCombined>> PostMeasuringPointCombined(MeasuringPointCombined mp)
         {
             return await _serviceAPI.PostMeasuringPointCombined(mp);
+        }     
+        */
+        public IActionResult PostMeasuringPointCombined(MeasuringPointCombined mp)
+        {
+            _serviceAPI.PostMeasuringPointCombined(mp);
+
+            return View(mp);
         }
 
         /// <summary>

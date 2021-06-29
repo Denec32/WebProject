@@ -73,3 +73,4 @@ D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\System.Text.Json.dll
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\CreateMeasuringPoint.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Home\PostMeasuringPointCombined.cshtml.g.cs

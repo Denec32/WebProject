@@ -5,9 +5,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Refit;
 using System;
+using WEBApplication.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using WEBApplication.Infrastructure;
 
 namespace WEBApplication
 {
@@ -23,6 +27,25 @@ namespace WEBApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IPasswordValidator<User>, CustomPasswordValidator>();
+            services.AddTransient<IUserValidator<User>, CustomUserValidator>();
+
+            services.AddDbContext<UserIdentityDbContext>(options =>
+            options.UseNpgsql(
+                Configuration["Data:PowerSupplyCompanyIdentity:ConnectionString"]));
+
+            services.AddIdentity<User, IdentityRole>(opts=> {
+                opts.User.RequireUniqueEmail = true;
+                //opts.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwzyxABCDEFGHIJKLMNOPQRSTUVWZYX";
+
+                opts.Password.RequiredLength = 6;
+                opts.Password.RequireNonAlphanumeric = false;
+                opts.Password.RequireUppercase = false;
+                opts.Password.RequireLowercase = false;
+                opts.Password.RequireDigit = false;
+                
+            }).AddEntityFrameworkStores<UserIdentityDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddControllersWithViews().AddNewtonsoftJson();
             services.AddRefitClient<IWEBServiceAPI>()
@@ -47,6 +70,7 @@ namespace WEBApplication
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

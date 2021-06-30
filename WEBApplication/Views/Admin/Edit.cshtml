@@ -1,0 +1,24 @@
+﻿@model User
+
+<div class="m-1 p-1">Изменить данные пользователя</div>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="Id">Идентификатор пользователя</label>
+        <input asp-for="Id" class="form-control" disabled />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Электроная почта</label>
+        <input asp-for="Email" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Пароль</label>
+        <input name="password" class="form-control"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>

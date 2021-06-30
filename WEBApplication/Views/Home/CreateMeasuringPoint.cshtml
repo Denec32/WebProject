@@ -5,31 +5,29 @@
 {
     <h2>Точка измерения электроэнергии</h2>
     <div class="form-group">
-        @*Html.HiddenFor(m => m.ElectricityMeasuringPoint.PointOfUseId)*@
-        @*Html.TextBoxFor(m => m.ElectricityMeasuringPoint.PointOfUseId, new { @Value = "12" })*@
         <input hidden value="@ViewBag.Id" name="ElectricityMeasuringPoint.PointOfUseId" />
 
         @Html.LabelFor(m => m.ElectricityMeasuringPoint.Name, "Название точки измерения электроэнергии")
-        @Html.TextBoxFor(m => m.ElectricityMeasuringPoint.Name, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.ElectricityMeasuringPoint.Name, new { @class = "form-control", @required = "required" })
     </div>
 
     <h2>Трансформатор тока</h2>
     <div class="form-group row">
         <div class="form-group col">
             @Html.LabelFor(m => m.CurrentTransformer.Number, "Номер трансформатора")
-            @Html.TextBoxFor(m => m.CurrentTransformer.Number, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.CurrentTransformer.Number, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.CurrentTransformer.TransformationRatio, "Коэффициент трансформации")
-            @Html.TextBoxFor(m => m.CurrentTransformer.TransformationRatio, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.CurrentTransformer.TransformationRatio, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.CurrentTransformer.TransformerType, "Тип трансформатора")
-            @Html.TextBoxFor(m => m.CurrentTransformer.TransformerType, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.CurrentTransformer.TransformerType, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.CurrentTransformer.CheckDate, "Дата проверки")
-            @Html.TextBoxFor(m => m.CurrentTransformer.CheckDate, new { @class = "form-control", @type = "datetime-local" })
+            @Html.TextBoxFor(m => m.CurrentTransformer.CheckDate, new { @class = "form-control", @type = "datetime-local", @required = "required" })
         </div>
     </div>
 
@@ -37,19 +35,19 @@
     <div class="form-group row">
         <div class="form-group col">
             @Html.LabelFor(m => m.PotentialTransformer.Number, "Номер трансформатора")
-            @Html.TextBoxFor(m => m.PotentialTransformer.Number, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.PotentialTransformer.Number, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.PotentialTransformer.TransformationRatio, "Коэффициент трансформации")
-            @Html.TextBoxFor(m => m.PotentialTransformer.TransformationRatio, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.PotentialTransformer.TransformationRatio, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.PotentialTransformer.TransformerType, "Тип трансформатора")
-            @Html.TextBoxFor(m => m.PotentialTransformer.TransformerType, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.PotentialTransformer.TransformerType, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.PotentialTransformer.CheckDate, "Дата проверки")
-            @Html.TextBoxFor(m => m.PotentialTransformer.CheckDate, new { @class = "form-control", @type = "datetime-local" })
+            @Html.TextBoxFor(m => m.PotentialTransformer.CheckDate, new { @class = "form-control", @type = "datetime-local", @required = "required" })
         </div>
     </div>
 
@@ -57,15 +55,15 @@
     <div class="form-group row">
         <div class="form-group col">
             @Html.LabelFor(m => m.ElectricityMeter.Number, "Номер счетчика")
-            @Html.TextBoxFor(m => m.ElectricityMeter.Number, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.ElectricityMeter.Number, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.ElectricityMeter.MeterType, "Тип счетчика")
-            @Html.TextBoxFor(m => m.ElectricityMeter.MeterType, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.ElectricityMeter.MeterType, new { @class = "form-control", @required = "required" })
         </div>
         <div class="form-group col">
             @Html.LabelFor(m => m.ElectricityMeter.CheckDate, "Дата проверки")
-            @Html.TextBoxFor(m => m.ElectricityMeter.CheckDate, new { @class = "form-control", @type = "datetime-local" })
+            @Html.TextBoxFor(m => m.ElectricityMeter.CheckDate, new { @class = "form-control", @type = "datetime-local", @required = "required" })
         </div>
     </div>
     <p><input class="btn btn-primary float-right" type="submit" value="Отправить" /></p>

@@ -114,11 +114,13 @@ namespace WEBApplication.Controllers
             return await _serviceAPI.PostMeasuringPointCombined(mp);
         }     
         */
+
         public IActionResult PostMeasuringPointCombined(MeasuringPointCombined mp)
         {
             _serviceAPI.PostMeasuringPointCombined(mp);
 
             return View(mp);
+
         }
 
         /// <summary>

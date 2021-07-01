@@ -87,3 +87,4 @@ D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Admin\Edit.cs
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\RoleAdmin\Create.cshtml.g.cs
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\RoleAdmin\Index.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\RoleAdmin\Edit.cshtml.g.cs

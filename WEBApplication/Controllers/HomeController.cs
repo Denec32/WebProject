@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WEBApplication.Models;
 using WEBService.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WEBApplication.Controllers
 {
@@ -20,11 +21,16 @@ namespace WEBApplication.Controllers
             _serviceAPI = api;
         }
 
+        [Authorize]
+        public ViewResult Login()
+        {
+           return View(new Dictionary<string, object> { ["Placeholder"] = "Placeholder" });
+        }
         public IActionResult Index()
         {
             List<PointOfUse> pou = _serviceAPI.GetPointOfUse().Result.ToList();
 
-            List<UsageAndMeasuringPointViewModel> vm = new List<UsageAndMeasuringPointViewModel>();
+            var vm = new List<UsageAndMeasuringPointViewModel>();
             for (int i = 0; i < pou.Count(); i++)
             {
                 vm.Add(new UsageAndMeasuringPointViewModel() { PointOfUse = pou[i]});

@@ -85,10 +85,10 @@ namespace WEBApplication.Controllers
             return View("Index", userManager.Users);
         }
 
-
         public async Task<IActionResult> Edit(string id)
         {
             User user = await userManager.FindByIdAsync(id);
+
             if (user != null)
             {
                 return View(user);

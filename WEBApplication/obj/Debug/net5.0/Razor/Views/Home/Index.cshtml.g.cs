@@ -27,20 +27,27 @@ using WEBApplication.Models;
 #nullable disable
 #nullable restore
 #line 3 "D:\Projects\WEBService\WEBApplication\Views\_ViewImports.cshtml"
-using WEBService.Models;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "D:\Projects\WEBService\WEBApplication\Views\_ViewImports.cshtml"
+using WEBService.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Projects\WEBService\WEBApplication\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Mvc;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"820d7eb37e5cc98b7b6ca2a0d295d7af3f458b43", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dbdfaff752aa6013973e9bdddf9f6b0f4a5df8f4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"331bc74045b0efee5fcbd4c5b0fd730eb9685410", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<UsageAndMeasuringPointViewModel>>
     {
         #line hidden
@@ -126,7 +133,7 @@ using Microsoft.AspNetCore.Mvc;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b435126", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b435308", async() => {
                 WriteLiteral("Проверить состояние");
             }
             );
@@ -150,7 +157,7 @@ AddHtmlAttributeValue("", 896, item.PointOfUse.ID, 896, 19, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</td>\r\n                <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b436695", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b436877", async() => {
                 WriteLiteral("Проверить состояние");
             }
             );
@@ -174,7 +181,7 @@ AddHtmlAttributeValue("", 1002, item.PointOfUse.ID, 1002, 19, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</td>\r\n                <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b438264", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b438446", async() => {
                 WriteLiteral("Проверить состояние");
             }
             );
@@ -198,7 +205,7 @@ AddHtmlAttributeValue("", 1106, item.PointOfUse.ID, 1106, 19, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</td>\r\n                <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b439833", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "820d7eb37e5cc98b7b6ca2a0d295d7af3f458b4310015", async() => {
                 WriteLiteral("Добавить новую точку измерения электроэнергии");
             }
             );

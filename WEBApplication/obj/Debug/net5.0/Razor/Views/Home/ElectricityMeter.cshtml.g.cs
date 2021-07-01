@@ -27,20 +27,27 @@ using WEBApplication.Models;
 #nullable disable
 #nullable restore
 #line 3 "D:\Projects\WEBService\WEBApplication\Views\_ViewImports.cshtml"
-using WEBService.Models;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "D:\Projects\WEBService\WEBApplication\Views\_ViewImports.cshtml"
+using WEBService.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Projects\WEBService\WEBApplication\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Mvc;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d309c7480b823c8ef1a757612c55d38f643ec53c", @"/Views/Home/ElectricityMeter.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dbdfaff752aa6013973e9bdddf9f6b0f4a5df8f4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"331bc74045b0efee5fcbd4c5b0fd730eb9685410", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_ElectricityMeter : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<ElectricityMeter>>
     {
         #pragma warning disable 1998

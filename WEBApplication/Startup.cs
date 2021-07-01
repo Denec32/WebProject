@@ -36,7 +36,6 @@ namespace WEBApplication
 
             services.AddIdentity<User, IdentityRole>(opts=> {
                 opts.User.RequireUniqueEmail = true;
-                //opts.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwzyxABCDEFGHIJKLMNOPQRSTUVWZYX";
 
                 opts.Password.RequiredLength = 6;
                 opts.Password.RequireNonAlphanumeric = false;

@@ -84,3 +84,6 @@ D:\Projects\WEBService\WEBApplication\bin\Debug\net5.0\Microsoft.EntityFramework
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Admin\Create.cshtml.g.cs
 D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Admin\Edit.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\RoleAdmin\Create.cshtml.g.cs
+D:\Projects\WEBService\WEBApplication\obj\Debug\net5.0\Razor\Views\RoleAdmin\Index.cshtml.g.cs

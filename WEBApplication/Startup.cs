@@ -31,7 +31,8 @@ namespace WEBApplication
             services.AddTransient<IUserValidator<User>, CustomUserValidator>();
 
             services.AddDbContext<UserIdentityDbContext>(options =>
-            options.UseNpgsql(
+            //options.UseNpgsql(
+            options.UseSqlServer(
                 Configuration["Data:PowerSupplyCompanyIdentity:ConnectionString"]));
 
             services.AddIdentity<User, IdentityRole>(opts=> {

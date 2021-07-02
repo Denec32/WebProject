@@ -47,7 +47,7 @@ namespace WEBApplication
             }).AddEntityFrameworkStores<UserIdentityDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddControllersWithViews().AddNewtonsoftJson();
+            services.AddControllersWithViews();
             services.AddRefitClient<IWEBServiceAPI>()
                 .ConfigureHttpClient(c => c.BaseAddress = new Uri("http://localhost:5007"));
             services.AddControllers().AddNewtonsoftJson();
@@ -68,9 +68,9 @@ namespace WEBApplication
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
+             
             app.UseAuthentication();
+            app.UseAuthorization();    
 
             app.UseEndpoints(endpoints =>
             {
@@ -78,6 +78,9 @@ namespace WEBApplication
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            UserIdentityDbContext.CreateAdminAccount(app.ApplicationServices,
+                Configuration).Wait();
         }
     }
 }

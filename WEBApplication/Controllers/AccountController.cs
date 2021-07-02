@@ -33,7 +33,7 @@ namespace WEBApplication.Controllers
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginModel details,
-            string returnUrl)
+                string returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -42,18 +42,30 @@ namespace WEBApplication.Controllers
                 {
                     await signInManager.SignOutAsync();
                     Microsoft.AspNetCore.Identity.SignInResult result =
-                        await signInManager.PasswordSignInAsync(
-                            user, details.Password, false, false);
+                            await signInManager.PasswordSignInAsync(
+                                user, details.Password, false, false);
                     if (result.Succeeded)
                     {
                         return Redirect(returnUrl ?? "/");
                     }
                 }
                 ModelState.AddModelError(nameof(LoginModel.Email),
-                    "Неверное имя пользователя или пароль");
+                    "Invalid user or password");
             }
-
             return View(details);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Logout() 
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Profile", "Home");
+        }
+
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

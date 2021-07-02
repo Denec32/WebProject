@@ -22,10 +22,21 @@ namespace WEBApplication.Controllers
         }
 
         [Authorize]
-        public ViewResult Login()
-        {
-           return View(new Dictionary<string, object> { ["Placeholder"] = "Placeholder" });
-        }
+        public ViewResult Profile() => View(GetData(nameof(Profile)));  
+
+        [Authorize(Roles = "Users")]
+        public IActionResult OtherAction() => View("Profile", GetData(nameof(OtherAction)));
+
+        private Dictionary<string, object> GetData(string actionName) =>
+            new Dictionary<string, object>
+            {
+                ["Action"] = actionName,
+                ["User"] = HttpContext.User.Identity.Name,
+                ["Authenicated"] = HttpContext.User.Identity.IsAuthenticated,
+                ["Auth Type"] = HttpContext.User.Identity.AuthenticationType,
+                ["In Users Role"] = HttpContext.User.IsInRole("Users")
+            };
+
         public IActionResult Index()
         {
             List<PointOfUse> pou = _serviceAPI.GetPointOfUse().Result.ToList();

@@ -24,6 +24,8 @@ namespace WEBApplication
                     webBuilder
                     
                     .UseStartup<Startup>()
+                    .UseDefaultServiceProvider(options =>
+                    options.ValidateScopes = false)
                     .UseKestrel(opt => opt.Listen(IPAddress.Any, 5005));
                 });
     }

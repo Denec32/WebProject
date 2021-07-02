@@ -4,9 +4,11 @@ using System;
 using System.Threading.Tasks;
 using WEBApplication.Models;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WEBApplication.Controllers
 {
+    [Authorize(Roles = "Admins")]
     public class AdminController : Controller
     {
         private UserManager<User> userManager;
